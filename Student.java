@@ -2,22 +2,22 @@ package Preparation;
 
 public class Student {
 	
-	private String name;
-	private int age;
+	private String studentName;
+	private int studentAge;
 	private String fatherName;
-	private char section;
-	private String gender;
-	public String getName() {
-		return name;
+	private char studentSection;
+	private String studentGender;
+	public String getStudentName() {
+		return studentName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
-	public int getAge() {
-		return age;
+	public int getStudentAge() {
+		return studentAge;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setStudentAge(int studentAge) {
+		this.studentAge = studentAge;
 	}
 	public String getFatherName() {
 		return fatherName;
@@ -25,30 +25,30 @@ public class Student {
 	public void setFatherName(String fatherName) {
 		this.fatherName = fatherName;
 	}
-	public char getSection() {
-		return section;
+	public char getStudentSection() {
+		return studentSection;
 	}
-	public void setSection(char section) {
-		this.section = section;
+	public void setStudentSection(char studentSection) {
+		this.studentSection = studentSection;
 	}
-	public String getGender() {
-		return gender;
+	public String getStudentGender() {
+		return studentGender;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setStudentGender(String studentGender) {
+		this.studentGender = studentGender;
 	}
-	public Student(String name, int age, String fatherName, char section, String gender) {
+	public Student(String studentName, int studentAge, String fatherName, char studentSection, String studentGender) {
 		super();
-		this.name = name;
-		this.age = age;
+		this.studentName = studentName;
+		this.studentAge = studentAge;
 		this.fatherName = fatherName;
-		this.section = section;
-		this.gender = gender;
+		this.studentSection = studentSection;
+		this.studentGender = studentGender;
 	}
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", age=" + age + ", fatherName=" + fatherName + ", section=" + section
-				+ ", gender=" + gender + "]";
+		return "Student [Student Name=" + studentName + ", Student age=" + studentAge + ", fatherName=" + fatherName + ", Student section=" + studentSection
+				+ ", Student gender=" + studentGender + "]";
 	}
 	
 	

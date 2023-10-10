@@ -8,10 +8,10 @@ public class Arraylist {
 
 		List<String> l=new CopyOnWriteArrayList<>();
 		
-		l.add("Tom");
-		l.add("Cat");
-		l.add("Jerry");
-		l.add("Dog");
+		l.add("Tom & Jerry");
+		l.add("Tom Cat");
+		l.add("JerrY Mouse");
+		l.add("Spike Dog");
 		l.add("Spike");
 		
 		for(String s:l) {

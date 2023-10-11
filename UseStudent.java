@@ -25,39 +25,39 @@ public class UseStudent {
 		List<Student> students1=Arrays.asList(s3,s4,s5);
 		List<List<Student>> s=Arrays.asList(students,students1);
 
-		List<String> gen = students.stream().filter(x -> x.getGender().equals("Male"))
-				.map(y -> y.getName().concat(y.getFatherName())).collect(Collectors.toList());
+		List<String> gen = students.stream().filter(x -> x.getStudentGender().equals("Male"))
+				.map(y -> y.getStudentName().concat(y.getFatherName())).collect(Collectors.toList());
 
 		System.out.println(gen);
 
 		System.out.println("************");
 
-		List<String> min = students.stream().map(y -> y.getName()).filter(x -> x.length() <= 4)
+		List<String> min = students.stream().map(y -> y.getStudentName()).filter(x -> x.length() <= 4)
 				.collect(Collectors.toList());
 
 		System.out.println(min);
 
 		System.out.println("************");
 
-		Long vote = students.stream().filter(x -> x.getGender().equalsIgnoreCase("Male")&&x.getAge()>= 18).count();
+		Long vote = students.stream().filter(x -> x.getStudentGender().equalsIgnoreCase("Male")&&x.getStudentAge()>= 18).count();
 		
 		System.out.println(vote);
 		
 		System.out.println("************");
 		
-		List<String> sort=students.stream().map(x->x.getName()).sorted().toList();
+		List<String> sort=students.stream().map(x->x.getStudentName()).sorted().toList();
 		
 		System.out.println(sort);
 		
 		System.out.println("***********");
 		
-		List<Integer> sorted=students.stream().map(x->x.getAge()).sorted(Comparator.reverseOrder()).toList();
+		List<Integer> sorted=students.stream().map(x->x.getStudentAge()).sorted(Comparator.reverseOrder()).toList();
 		
 		System.out.println(sorted);
 		
 		System.out.println("************");
 		
-		List<Character> remove=students.stream().map(x->x.getSection()).distinct().toList();
+		List<Character> remove=students.stream().map(x->x.getStudentSection()).distinct().toList();
 		
 		System.out.println(remove);
 		
@@ -69,31 +69,31 @@ public class UseStudent {
 		
 		System.out.println("************");
 		
-		Boolean sec=students.stream().anyMatch(x->x.getSection()=='B');
+		Boolean sec=students.stream().anyMatch(x->x.getStudentSection()=='B');
 		
 		System.out.println(sec);
 		
 		System.out.println("************");
 		
-		Student maxy=students.stream().max(Comparator.comparing(Student::getAge)).get();
+		Student maxy=students.stream().max(Comparator.comparing(Student::getStudentAge)).get();
 		
 		System.out.println(maxy);
 		
 		System.out.println("************");
 		
-		Student mini=students.stream().min(Comparator.comparing(Student::getAge)).get();
+		Student mini=students.stream().min(Comparator.comparing(Student::getStudentAge)).get();
 		
 		System.out.println(mini);
 		
 		System.out.println("************");
 		
-		Integer larg=students.stream().map(x->x.getAge()).distinct().skip(1).findFirst().get();
+		Integer larg=students.stream().map(x->x.getStudentAge()).distinct().skip(1).findFirst().get();
 		
 		System.out.println(larg);
 		
 		System.out.println("************");
 		
-		Map<String,Student> l1=students.stream().collect(Collectors.toMap(x->x.getName(), y->y));
+		Map<String,Student> l1=students.stream().collect(Collectors.toMap(x->x.getStudentName(), y->y));
 		
 		l1.forEach((x,y)->System.out.println(x+" "+y));
 		
